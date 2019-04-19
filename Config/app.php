@@ -1,0 +1,34 @@
+<?php 
+
+date_default_timezone_set("America/Bogota");
+
+$GLOBALS['config'] = array(
+	"appName"=>"Api RestFull Beeko Project",
+	"version"=>"0.0.1",
+	"domain"=>"http://beekoproject.com/",
+	"logo"=>"/assets/favicon.ico",
+	//"cache_enabled"=>false,
+	//"handlebars_enabled"=>false,
+	"path"=>array(
+		"root"=>"api/",
+		"app"=>"app/",
+	//	"cache"=>"caches/",
+		"core"=>"core/",
+		"session"=>"app/sessions",
+	//	"basePath"=>$_SERVER['DOCUMENT_ROOT'],
+	//	"index"=>"index.php",
+	),
+	//"defaults"=>array(
+	//	"controller"=>"main/",
+	//	"method"=>"index",
+	//),
+	"routes"=>array(),
+	"database"=>array(
+		"host"=>"localhost",
+		"username"=>"root",
+		"password"=>"zero",
+		"name"=>"beekoproject",
+	)
+);
+
+?>
