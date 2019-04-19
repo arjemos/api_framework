@@ -1,4 +1,4 @@
 /vendor/
 *.log
 sftp-config.json
-*.json
+*.lock
