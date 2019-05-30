@@ -38,8 +38,13 @@ class Router {
         $requestUri = $this->getRequestUri();
 
         $regRoutes = Database::query("SELECT * FROM Routes WHERE method = '" . $_SERVER['REQUEST_METHOD'] . "';");
+
         foreach ($regRoutes as $reg) {
-            $this->add($reg['request_uri'], $reg['action']);
+            if ($GLOBALS['config']["path"]["root"] != "") {
+                $this->add("/".$GLOBALS['config']["path"]["root"].$reg['request_uri'], $reg['action']);
+            }else{
+                $this->add($reg['request_uri'], $reg['action']);
+            }
         }
         
         foreach ($this->routes as $route)
