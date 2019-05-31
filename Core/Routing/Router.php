@@ -37,7 +37,7 @@ class Router {
         $n = "";
         $requestUri = $this->getRequestUri();
 
-        $regRoutes = Database::query("SELECT * FROM Routes WHERE method = '" . $_SERVER['REQUEST_METHOD'] . "';");
+        $regRoutes = Database::query("SELECT * FROM routes WHERE method = '" . $_SERVER['REQUEST_METHOD'] . "';");
 
         foreach ($regRoutes as $reg) {
             if ($GLOBALS['config']["path"]["root"] != "") {
